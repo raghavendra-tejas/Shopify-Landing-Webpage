@@ -1,0 +1,17 @@
+.navigation-container {
+  background-color: #fbf7ed;
+  font-family: 'Roboto', sans-serif;
+}
+
+.navigation-container p i {
+  font-size: 12px;
+}
+
+.nav-right button {
+  background-color: #008060;
+  width: 150px;
+  height: 50px;
+  border-radius: 5px;
+  font-weight: 600;
+  color: #fff;
+}
