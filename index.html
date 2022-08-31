@@ -6,9 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- CSS links -->
     <link rel="stylesheet" href="CSS\01_general.css" />
-    <link rel="stylesheet" href="CSS\02_nav.css" />
+    <link rel="stylesheet" href="CSS\03_hero.css" />
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              cream: "#fbf7ed",
+              button_green: "#008060",
+            },
+            fontFamily: {
+              roboto: ["Roboto", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
     <!-- Font Awesome -->
     <script
       src="https://kit.fontawesome.com/65a78c5857.js"
@@ -18,8 +33,9 @@
     <title>Shopify Landing Webpage Clone</title>
   </head>
   <body>
+    <!-- Navigation Section -->
     <nav
-      class="flex justify-between items-center h-20 navigation-container px-5 sm:px-8 md:px-11 lg:px-14 xl:px-20 2xl:px-24"
+      class="flex justify-between items-center h-20 px-5 sm:px-8 md:px-11 lg:px-14 xl:px-20 2xl:px-24 bg-cream fixed w-full font-roboto"
     >
       <div class="flex flex-row">
         <img
@@ -28,39 +44,43 @@
           alt="shopify logo"
         />
         <p
-          class="text-lg cursor-pointer pr-5 text-gray-500 hover:text-gray-900 hidden xl:block"
+          class="cursor-pointer pr-5 text-gray-500 hover:text-gray-900 hidden xl:block"
         >
-          Start<i class="fa-solid fa-angle-down center pl-2"></i>
+          Start<i class="fa-solid fa-angle-down pl-2 align-middle text-xs"></i>
         </p>
         <p
-          class="text-lg cursor-pointer pr-5 text-gray-500 hover:text-gray-900 hidden xl:block"
+          class="cursor-pointer pr-5 text-gray-500 hover:text-gray-900 hidden xl:block"
         >
-          Sell<i class="fa-solid fa-angle-down pl-2"></i>
+          Sell<i class="fa-solid fa-angle-down pl-2 align-middle text-xs"></i>
         </p>
         <p
-          class="text-lg cursor-pointer pr-5 text-gray-500 hover:text-gray-900 hidden xl:block"
+          class="cursor-pointer pr-5 text-gray-500 hover:text-gray-900 hidden xl:block"
         >
-          Market<i class="fa-solid fa-angle-down pl-2"></i>
+          Market<i class="fa-solid fa-angle-down pl-2 align-middle text-xs"></i>
         </p>
         <p
-          class="text-lg cursor-pointer pr-5 text-gray-500 hover:text-gray-900 hidden xl:block"
+          class="cursor-pointer pr-5 text-gray-500 hover:text-gray-900 hidden xl:block"
         >
-          Manage<i class="fa-solid fa-angle-down pl-2"></i>
+          Manage<i class="fa-solid fa-angle-down pl-2 align-middle text-xs"></i>
         </p>
       </div>
       <div class="flex flex-row items-center nav-right">
         <p
-          class="text-lg cursor-pointer text-gray-500 hover:text-gray-900 hidden xl:block"
+          class="cursor-pointer text-gray-500 hover:text-gray-900 hidden xl:block"
         >
           Pricing
         </p>
         <p
-          class="text-lg cursor-pointer pl-5 text-gray-500 hover:text-gray-900 hidden xl:block"
+          class="cursor-pointer pl-5 text-gray-500 hover:text-gray-900 hidden xl:block"
         >
-          Learn<i class="fa-solid fa-angle-down pl-2"></i>
+          Learn<i class="fa-solid fa-angle-down pl-2 align-middle text-xs"></i>
         </p>
-        <p class="pr-5 text-lg pl-5 cursor-pointer">Log In</p>
-        <button class="hidden xl:block text-lg">Try for free</button>
+        <p class="pr-5 pl-5 cursor-pointer">Log In</p>
+        <button
+          class="hidden xl:block bg-button_green w-32 h-10 rounded-md text-white font-medium"
+        >
+          Try for free
+        </button>
         <img
           class="w-8 xl:hidden cursor-pointer"
           src="IMAGES\icons8-menu-60.png"
@@ -68,5 +88,63 @@
         />
       </div>
     </nav>
+    <!-- Hero Section -->
+    <section
+      class="text-gray-400 bg-cream body-font h-full py-10 sm:px-8 md:px-11 lg:px-14 xl:px-20 2xl:px-24"
+    >
+      <div
+        class="container mx-auto flex pt-32 xl:flex-row flex-col items-center"
+      >
+        <div
+          class="xl:flex-grow xl:w-1/2 xl:pr-24 flex flex-col md:items-start md:text-left mb-16 items-center"
+        >
+          <h1
+            class="sm:text-5xl text-4xl mb-5 font-black text-green-900 overflow-hidden"
+          >
+            The easiest way to <br />
+            sell online in India
+          </h1>
+          <p
+            class="mb-8 leading-relaxed px-10 sm:px-0 text-center md:text-left"
+          >
+            Try one of the most powerful platforms on the market for free. No
+            technical knowledge needed.
+          </p>
+          <div class="flex w-full md:justify-start justify-center items-end">
+            <div class="relative mr-4 md:w-full lg:w-full xl:w-1/2 w-2/4">
+              <label
+                for="hero-field"
+                class="leading-7 text-sm text-gray-400"
+              ></label>
+              <input
+                type="text"
+                id="hero-field"
+                name="hero-field"
+                class="w-full rounded bg-opacity-40 border border-gray-700 focus:ring-2 focus:ring-indigo-900 focus:bg-transparent focus:border-indigo-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                placeholder="Enter your email address"
+              />
+            </div>
+            <button
+              class="bg-button_green w-36 h-10 rounded-md text-white font-medium"
+            >
+              Try for free
+            </button>
+          </div>
+          <p
+            class="text-sm mt-2 text-gray-500 mb-8 w-full px-10 sm:px-0 text-center md:text-left"
+          >
+            Try Shopify free for 14 days, no credit card required. By entering
+            your email, you agree to receive marketing emails from Shopify.
+          </p>
+        </div>
+        <div class="w-72 sm:w-96">
+          <img
+            class="object-cover object-center rounded"
+            alt="hero"
+            src="IMAGES\10026.png"
+          />
+        </div>
+      </div>
+    </section>
   </body>
 </html>
