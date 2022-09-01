@@ -17,7 +17,7 @@
 
 ## Webpage Templete screenshot
 
-![Webpage template](IMAGES\screenshot.png)
+![Webpage template](screenshot.png)
 ![badge](https://img.shields.io/badge/Time%20taken-2%20Days-green?style=for-the-badge)
 
 ## Hosted webpage link
